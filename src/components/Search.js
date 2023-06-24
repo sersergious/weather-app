@@ -11,6 +11,7 @@ export default function SearchBar(props) {
         // updates searchQuery state variable to track user's input
     };
 
+
     const handleInput = async () => {
         try {
             const geocodingEndpoint = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
@@ -34,23 +35,25 @@ export default function SearchBar(props) {
     };
 
     return (
-        <div className="w-[60%] sm:w-[500px] mx-auto my-4">
-            <div className="flex items-center bg-white rounded-full shadow-md w-full">
+
+        <div className="w-[20rem] sm:w-[28rem] mx-auto my-4">
+            <div className="flex items-center rounded-full shadow-md bg-blue-100 bg-opacity-75 w-full">
                 <input
                     type="search"
                     value={searchQuery}
                     onChange={handleInputChange}
                     onKeyPress={handleKeyPress}
                     placeholder="Search"
-                    className="focus:outline-none flex-1 py-2 px-4 text-gray-700 placeholder-gray-500 rounded-l-full border-gray-300 h-10"
+                    className="focus:outline-none flex-1 py-2 px-4 text-gray-800 placeholder-gray-500 rounded-l-full border-gray-300 h-10 bg-transparent"
                 />
                 <button
                     onClick={handleInput}
-                    className="p-2 pr-3 bg-[#bcbcbc] hover:bg-gray-400 rounded-r-full transition-colors duration-300 h-10"
+                    className="p-2 pr-3 bg-blue-300 hover:bg-blue-400 rounded-r-full transition-colors duration-300 h-10"
                 >
                     <BsSearch className="text-white" />
                 </button>
             </div>
         </div>
+
     );
 }
