@@ -16,22 +16,19 @@ export default function Weather(props) {
 
     return (
         <div className="flex justify-center w-full my-8">
-            <div className="bg-white w-[18rem] h-[18rem] sm:w-[24rem] sm:h-[20rem] rounded-xl shadow-md flex flex-col items-center justify-center">
-                <div className="flex items-center justify-center">
+            <div className="bg-blue-100 bg-opacity-75 w-[20rem] h-[18rem] sm:w-[28rem] sm:h-80 rounded-xl shadow-md p-8 flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center mb-4">
                     <img
                         src={`http://openweathermap.org/img/w/${weather.icon}.png`}
                         alt="Weather Icon"
                         className="w-24 h-24"
                     />
                 </div>
-                <p className="text-4xl font-bold mt-2">
-                    {Math.round(weatherData.main.temp)}°C
-                </p>
-                <p className="text-lg text-gray-500 capitalize">
-                    {weather.description}
-                </p>
+                <p className="text-4xl font-bold">{Math.round(weatherData.main.temp)}°C</p>
+                <p className="text-lg text-gray-500 capitalize">{weather.description}</p>
                 <p className="text-lg text-gray-500 mt-2">{weatherData.name}</p>
             </div>
         </div>
+
     );
 }

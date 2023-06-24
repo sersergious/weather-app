@@ -12,13 +12,13 @@ function App() {
     setWeatherData(data);
   }
 
-  console.log("I'm a parent\n", weatherData);
-
   return (
-      <div className="bg-[#cfcfcf] w-full h-screen text-gray-900">
-        <Header />
-        <Searchbar updateWeatherData = {updateWeatherData} />
-        <Weather weatherData = {weatherData} />
+      <div className="flex flex-col w-full h-screen text-gray-900 ">
+
+              <Header />
+              <Searchbar updateWeatherData = {updateWeatherData} />
+              <Weather weatherData = {weatherData} />
+
       </div>
   );
 }
