@@ -13,10 +13,12 @@ function App() {
   }
 
   return (
-      <div className="w-full h-screen text-gray-900">
-        <Header />
-        <Searchbar updateWeatherData = {updateWeatherData} />
-        <Weather weatherData = {weatherData} />
+      <div className="flex flex-col w-full h-screen text-gray-900 ">
+
+              <Header />
+              <Searchbar updateWeatherData = {updateWeatherData} />
+              <Weather weatherData = {weatherData} />
+
       </div>
   );
 }
